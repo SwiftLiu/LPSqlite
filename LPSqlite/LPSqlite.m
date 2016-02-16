@@ -70,6 +70,14 @@
     return array;
 }
 
+
+#pragma mark - 创建
++ (BOOL)createDBWithPath:(NSString *)path
+{
+    //MARK: NEED DO 待完成<<<<<<< 创建数据库 >>>>>>>
+    return YES;
+}
+
 #pragma mark - 更新
 + (NSInteger)updateDBName:(NSString *)dbName sql:(NSString *)sql
 {
