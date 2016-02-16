@@ -14,6 +14,7 @@
 		5D6265351C72CC0400A000CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6265341C72CC0400A000CC /* Assets.xcassets */; };
 		5D6265381C72CC0400A000CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6265361C72CC0400A000CC /* LaunchScreen.storyboard */; };
 		5D6265421C72CC2300A000CC /* LPSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6265411C72CC2300A000CC /* LPSqlite.m */; };
+		5D6265441C72F3CC00A000CC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6265431C72F3CC00A000CC /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5D6265391C72CC0400A000CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D6265401C72CC2300A000CC /* LPSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSqlite.h; sourceTree = "<group>"; };
 		5D6265411C72CC2300A000CC /* LPSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSqlite.m; sourceTree = "<group>"; };
+		5D6265431C72F3CC00A000CC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D6265441C72F3CC00A000CC /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,7 @@
 		5D62651C1C72CC0300A000CC = {
 			isa = PBXGroup;
 			children = (
+				5D6265431C72F3CC00A000CC /* libsqlite3.tbd */,
 				5D6265271C72CC0400A000CC /* Demo */,
 				5D6265261C72CC0400A000CC /* Products */,
 			);

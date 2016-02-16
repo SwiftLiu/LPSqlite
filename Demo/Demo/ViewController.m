@@ -7,9 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "LPSqlite.h"
 
 @interface ViewController ()
-
+{
+    LPSqlite *sqlite;
+}
 @end
 
 @implementation ViewController
@@ -19,9 +22,14 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)creatDB:(id)sender {
+    NSString *path = [NSString stringWithFormat:@"%@/Documents/Test.sqlite", NSHomeDirectory()];
+    sqlite = [LPSqlite sqlitePath:path];
 }
+
+- (IBAction)openDB:(id)sender {
+    [sqlite updateWithSql:nil];
+}
+
 
 @end
