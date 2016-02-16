@@ -31,5 +31,4 @@
 - (NSArray *)querySelect:(NSString *)queryObject from:(NSString *)tableName where:(NSString *)columnName equal:(NSString *)target other:(NSString *)other;
 
 
-
 @end

@@ -59,22 +59,12 @@
 {
     NSMutableArray *array = [NSMutableArray array];
     if (sql && sql.length) {
-        sqlite3_stmt *statement;
         sqlite3 *db = [self openDB];
         if (db) {
+            sqlite3_stmt *statement;
             if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &statement, nil) == SQLITE_OK) {
                 while (sqlite3_step(statement) == SQLITE_ROW) {
-                    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-                    for (int i=0,len=sqlite3_column_count(statement); i<len; i++) {
-                        NSString *key = [[NSString alloc] initWithUTF8String:(char *)sqlite3_column_name(statement, i)];
-                        if (sqlite3_column_text(statement, i)) {
-                            NSString *object = [[NSString alloc] initWithUTF8String:(char *)sqlite3_column_text(statement, i)];
-                            [dict setObject:object forKey:key];
-                        }else{
-                            [dict setObject:@"" forKey:key];
-                        }
-                    }
-                    [array addObject:dict];
+                    [array addObject:Column(statement)];
                 }
             }
             [self closeDB:db withStmt:statement];
@@ -83,19 +73,34 @@
     return array;
 }
 
+//解析单行数据
+NSDictionary *Column(sqlite3_stmt *stmt) {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    for (int i=0,len=sqlite3_column_count(stmt); i<len; i++) {
+        //字段名
+        NSString *key = [[NSString alloc] initWithUTF8String:(char *)sqlite3_column_name(stmt, i)];
+        //值
+        NSString *object = @"";
+        if (sqlite3_column_text(stmt, i)) {
+            object = [[NSString alloc] initWithUTF8String:(char *)sqlite3_column_text(stmt, i)];
+        }
+        [dict setObject:object forKey:key];
+    }
+    return dict;
+}
+
 
 #pragma mark 更新
 - (NSInteger)updateWithSql:(NSString *)sql
 {
     NSInteger count;
     if (sql && sql.length) {
-        char *err;
         sqlite3 *db = [self openDB];
         if (db) {
-            if ((count=sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err)) == SQLITE_OK) {
-                NSLog(@"数据库操作成功：%ld行!", count);
+            if ((sqlite3_exec(db, [sql UTF8String], NULL, NULL, NULL)) == SQLITE_OK) {
+                NSLog(@"数据库操作成功");
             }else {
-                NSLog(@"数据库操作数据失败!");
+                NSLog(@"数据库操作数据失败，请检查sql语句!");
             }
             [self closeDB:db withStmt:nil];
         }
@@ -110,7 +115,6 @@
     sqlite3 *db;
     if (_dbPath && _dbPath.length) {
         if (sqlite3_open([_dbPath UTF8String], &db) == SQLITE_OK) {
-            NSLog(@"打开了数据库，路径：%@", _dbPath);
             return db;
         }else{
             NSLog(@"打开数据库失败，路径：%@", _dbPath);
