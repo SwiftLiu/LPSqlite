@@ -20,6 +20,8 @@
 ///查询 指定表 指定行 指定字段信息 附加
 + (NSArray *)queryDBName:(NSString *)dbName select:(NSString *)queryObject from:(NSString *)tableName where:(NSString *)columnName equal:(NSString *)target other:(NSString *)other;
 
+///本地创建db文件
++ (BOOL)createDBWithPath:(NSString *)path;
 ///查询
 + (NSArray *)queryDBName:(NSString *)dbName sql:(NSString *)sql;
 ///更新
