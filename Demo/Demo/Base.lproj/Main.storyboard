@@ -17,18 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmZ-FW-2zy">
-                                <rect key="frame" x="128" y="217" width="75" height="30"/>
-                                <state key="normal" title="创建数据库"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh5-s5-MG3">
+                                <rect key="frame" x="108" y="269" width="105" height="30"/>
+                                <state key="normal" title="本地沙盒数据库"/>
                                 <connections>
-                                    <action selector="creatDB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CG2-KW-KlN"/>
+                                    <action selector="localDatabase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BtI-Hc-H1S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfp-XT-JjN">
-                                <rect key="frame" x="128" y="269" width="75" height="30"/>
-                                <state key="normal" title="打开数据库"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmZ-FW-2zy">
+                                <rect key="frame" x="108" y="207" width="104" height="30"/>
+                                <state key="normal" title="APP里的数据库"/>
                                 <connections>
-                                    <action selector="openDB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cfg-dP-1Ht"/>
+                                    <action selector="database:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uPa-XV-0kO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -38,6 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="236" y="364"/>
         </scene>
     </scenes>
 </document>

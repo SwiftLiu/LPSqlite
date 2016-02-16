@@ -15,6 +15,7 @@
 		5D6265381C72CC0400A000CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6265361C72CC0400A000CC /* LaunchScreen.storyboard */; };
 		5D6265421C72CC2300A000CC /* LPSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6265411C72CC2300A000CC /* LPSqlite.m */; };
 		5D6265441C72F3CC00A000CC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6265431C72F3CC00A000CC /* libsqlite3.tbd */; };
+		5D62654C1C7314B300A000CC /* Test.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5D62654B1C7314B300A000CC /* Test.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		5D6265401C72CC2300A000CC /* LPSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSqlite.h; sourceTree = "<group>"; };
 		5D6265411C72CC2300A000CC /* LPSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSqlite.m; sourceTree = "<group>"; };
 		5D6265431C72F3CC00A000CC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5D62654B1C7314B300A000CC /* Test.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Test.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				5D62653F1C72CC2300A000CC /* LPSqlite */,
 				5D62652B1C72CC0400A000CC /* AppDelegate.h */,
 				5D62652C1C72CC0400A000CC /* AppDelegate.m */,
+				5D62654B1C7314B300A000CC /* Test.sqlite */,
 				5D62652E1C72CC0400A000CC /* ViewController.h */,
 				5D62652F1C72CC0400A000CC /* ViewController.m */,
 				5D6265311C72CC0400A000CC /* Main.storyboard */,
@@ -156,6 +159,7 @@
 				5D6265381C72CC0400A000CC /* LaunchScreen.storyboard in Resources */,
 				5D6265351C72CC0400A000CC /* Assets.xcassets in Resources */,
 				5D6265331C72CC0400A000CC /* Main.storyboard in Resources */,
+				5D62654C1C7314B300A000CC /* Test.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
