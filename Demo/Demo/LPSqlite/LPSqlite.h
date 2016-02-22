@@ -1,13 +1,10 @@
 //
-//  LPSqlite.h
-//
 //  Created by iOS_Liu on 16/2/3.
 //  Copyright © 2016年 iOS_Liu. All rights reserved.
 //
-//  下载链接 https://github.com/SwiftLiu/LPSqlite.git
 //  作者GitHub主页 https://github.com/SwiftLiu
 //  作者邮箱 1062014109@qq.com
-//
+//  下载链接 https://github.com/SwiftLiu/LPSqlite.git
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>

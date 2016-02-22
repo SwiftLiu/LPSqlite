@@ -50,7 +50,6 @@
 		5D62651C1C72CC0300A000CC = {
 			isa = PBXGroup;
 			children = (
-				5D6265431C72F3CC00A000CC /* libsqlite3.tbd */,
 				5D6265271C72CC0400A000CC /* Demo */,
 				5D6265261C72CC0400A000CC /* Products */,
 			);
@@ -77,6 +76,7 @@
 				5D6265341C72CC0400A000CC /* Assets.xcassets */,
 				5D6265361C72CC0400A000CC /* LaunchScreen.storyboard */,
 				5D6265391C72CC0400A000CC /* Info.plist */,
+				5D6265431C72F3CC00A000CC /* libsqlite3.tbd */,
 				5D6265281C72CC0400A000CC /* Supporting Files */,
 			);
 			path = Demo;
